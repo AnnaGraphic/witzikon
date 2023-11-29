@@ -11,5 +11,5 @@
     <li>error handling</li>
     <li>sanitize input</li>
   <li>research on localstorage</li>
-  <li>nav bar</n>
+  <li>✔️ nav bar</n>
 </ul>
