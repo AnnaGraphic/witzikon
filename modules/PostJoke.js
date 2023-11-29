@@ -13,10 +13,16 @@ export async function postJoke() {
       const response = await fetch(url, {
         method: 'POST',
         headers: {
-          'Content-Type': 'text/plain'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: `joke=${jokeText}`
       })
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log(responseData);
+      } else (
+        console.log(`Error: ${response.status} - ${response.statusText}`)
+      )
     } catch (error) {
       console.log(error);
     }
