@@ -1,14 +1,19 @@
-html,
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
+  font-family: 'Roboto',sans-serif;
 	border: none;
 	margin: 0;
 	padding: 0;
   background-color: rgb(253, 253, 212);
-  color: pink;
+  color: rgb(47, 2, 34);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
+  min-height: 100vh;
   flex-direction: column;
 }
 .form-container {
@@ -19,23 +24,13 @@ body {
   justify-content: center;
   width: 100vw;
 }
-.card {
-  width: 200px;
-  min-height: 300px;
-  background-color: hotpink;
-  border-radius: 0.5em;
-}
+
 li {
   font-size: medium;
   list-style: none;
   margin: none;
 }
-.sub-header {
-  color: white;
-}
-h3 {
-  color: white;
-}
+
 p {
   margin: 0.2em;
 }
