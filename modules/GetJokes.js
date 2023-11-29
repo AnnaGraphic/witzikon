@@ -7,20 +7,10 @@ async function getJokes() {
     const witzeUrl = "http://jokes.panda.krebsco.de/api/jokes";
     const response = await fetch(witzeUrl);
     const data = await response.json();
-    console.log("response.status", response.status);
-    if (response.status === 500) {
-      console.log("500");
-      createImage("https://http.cat/500", "Uh oh");
-      throw new Error("Uh oh");
-    } else if (response.status === 404) {
-      createImage("https://http.cat/404", "Not found");
-      throw new Error(response.status);
-    } else if (response.status === 400) {
-      createImage("https://http.cat/400", "Bad request");
-      throw new Error("Forbidden");
-    } else if (response.status === 401) {
-      createImage("https://http.cat/401", "Unauthorized");
-      throw new Error("Unauthorized");
+    const status =  response.status;
+
+    if (status === 500 || status === 404 || status === 400 || status === 401) {
+      throw new Error(status);
     }
 
     const result = document.querySelector(".result");
@@ -31,16 +21,16 @@ async function getJokes() {
       result.appendChild(li);
     });
   } catch (error) {
+    createImage(`https://http.cat/${error.message}`, `${error}`);
     console.log(error);
   }
 }
 
 function createImage(src, alt) {
   const result = document.querySelector(".result");
-  console.log("createImage");
+  //console.log("createImage");
   const img = document.createElement("img");
   img.src = src;
   img.alt = alt;
-  console.log(img);
   result.appendChild(img);
 }
