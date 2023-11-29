@@ -8,5 +8,7 @@
     <li>show http cats https://http.cat/status/500</li>
     <br>
   <li>POST request</li>
+    <li>error handling</li>
+    <li>sanitize input</li>
   <li>research on localstorage</li>
 </ul>
