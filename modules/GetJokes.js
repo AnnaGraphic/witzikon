@@ -1,4 +1,8 @@
-export async function getJokes() {
+export function setupEventListener() {
+  const button = document.getElementById('button');
+  button.addEventListener('click', getJokes);
+}
+async function getJokes() {
   try {
     const witzeUrl = "http://jokes.panda.krebsco.de/api/jokes";
     const response = await fetch(witzeUrl);

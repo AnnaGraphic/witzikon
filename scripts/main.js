@@ -1,4 +1,4 @@
-import { getJokes } from '../modules/GetJokes.js';
+import { setupEventListener } from '../modules/GetJokes.js';
 import { postJoke } from '../modules/PostJoke.js';
 
 function createNavbar() {
@@ -24,3 +24,4 @@ function createNavbar() {
 //console.log(getJokes());
 createNavbar();
 postJoke();
+setupEventListener();
