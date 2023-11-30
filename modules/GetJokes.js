@@ -9,7 +9,7 @@ async function getJokes() {
     const data = await response.json();
     const status =  response.status;
 
-    if (status === 500 || status === 404 || status === 400 || status === 201) {
+    if (status === 500 || status === 404 || status === 400 || status === 401) {
       throw new Error(status);
     }
 
