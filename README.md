@@ -10,9 +10,10 @@
     <br>
   <li>✔️ POST request</li>
     <li>error handling</li>
-    <li>sanitize input</li>
+    <li>✔️ sanitize input</li>
   <li>research on localstorage</li>
   <li>✔️ nav bar</li>
   <li>show a sock puppet</li>
+  <li>write intro text for README</li>
   <li>deploy<li>
 </ul>
