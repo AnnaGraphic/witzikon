@@ -60,6 +60,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
 
 button:hover {
@@ -68,10 +69,15 @@ button:hover {
 
 a {
   text-decoration: none;
-  color: #3498db;
+  color: black;
   transition: color 0.3s ease;
   font-size: 2em;
   margin-right: 20px;
+  background-color: grey;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
 }
 
 a:hover {
