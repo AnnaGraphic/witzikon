@@ -18,8 +18,8 @@ function createNavbar() {
   navbar.appendChild(homeLink);
   navbar.appendChild(postJokesLink);
 
-  const body = document.body;
-  body.insertBefore(navbar, body.firstChild);
+  const header = document.getElementById('header');
+  header.insertBefore(navbar, header.firstChild);
 }
 //console.log(getJokes());
 createNavbar();
