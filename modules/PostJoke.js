@@ -13,7 +13,7 @@ export async function postJoke() {
       return;
     }
 
-    const url = 'http://jokes.panda.krebsco.de/api/jokes';
+    const url = 'https://jokes.panda.krebsco.de/api/jokes';
 
     try {
       console.log(jokeText);

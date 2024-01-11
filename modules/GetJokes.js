@@ -4,7 +4,7 @@ export function setupEventListener() {
 }
 async function getJokes() {
   try {
-    const witzeUrl = "http://jokes.panda.krebsco.de/api/jokes";
+    const witzeUrl = "https://jokes.panda.krebsco.de/api/jokes";
     const response = await fetch(witzeUrl);
     const data = await response.json();
     const status =  response.status;
